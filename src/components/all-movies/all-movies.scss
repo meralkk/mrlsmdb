@@ -1,0 +1,64 @@
+@use "../../assets/variables" as v;
+
+.movie-card {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.movie-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Alt kısmını kaplamak için istediğiniz yüzdeliği ayarlayın */
+  margin-bottom: 0px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.title {
+  font-size: 17px !important;
+  font-weight: 5000;
+  text-align: left;
+  max-height: 30px; /* İki satırın yüksekliği */
+  max-width: 90%; /* Başlığın maksimum genişliği */
+  white-space: nowrap; /* Metni taşıma */
+  overflow: hidden; /* Fazla metni gizleme */
+  text-overflow: ellipsis; /* Taşan metni üç nokta ile kırpma */
+}
+.average {
+  position: absolute;
+  bottom: 36px; /* Oy ortalama yüksekliğini ayarlayın */
+  right: 10px; /* Oy ortalama sol kenarını ayarlayın */
+  color: v.$color2; /* Yazı rengini beyaza ayarlayın */
+  padding: 5px; /* İstediğiniz dolgu miktarını ayarlayın */
+  border-radius: 5px; /* Köşe yuvarlama ekleyin */
+
+  svg {
+    padding-bottom: 4px;
+  }
+}
+.release-date {
+    font-size: 16px;
+  position: absolute;
+  bottom: 36px; /* Oy ortalama yüksekliğini ayarlayın */
+  left: 10px; /* Oy ortalama sol kenarını ayarlayın */
+  color: v.$color3; /* Yazı rengini beyaza ayarlayın */
+  padding: 5px; /* İstediğiniz dolgu miktarını ayarlayın */
+  border-radius: 5px; /* Köşe yuvarlama ekleyin */
+}
+
+.title {
+  position: absolute;
+  font-size: 18px;
+  bottom: 16px; /* Oy ortalama yüksekliğini ayarlayın */
+  left: 10px; /* Oy ortalama sol kenarını ayarlayın */
+  color: v.$color3; /* Yazı rengini beyaza ayarlayın */
+  padding: 5px; /* İstediğiniz dolgu miktarını ayarlayın */
+  border-radius: 5px; /* Köşe yuvarlama ekleyin */
+}

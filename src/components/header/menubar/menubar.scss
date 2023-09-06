@@ -1,0 +1,39 @@
+@use "../../../assets/variables" as v;
+
+.navbar {
+  background-color: v.$color1;
+  font-size: 18px;
+  height: 77px;
+  border-bottom: 0.1px solid v.$color3_1;
+  margin-bottom: 20px;
+
+
+  .navbar-brand {
+    color: v.$color3;
+
+    &:hover {
+      color: v.$color2;
+    }
+  }
+  .links .nav-link {
+    color: v.$color3;
+
+    &:hover {
+      color: v.$color2;
+    }
+  }
+
+  .me-2 {
+    margin-right: 2rem; /* 2rem sağ boşluk ekleyin (isteğe bağlı) */
+  }
+
+  .form-control {
+    width: 600px; /* Arama kutusunun genişliği 400px olarak ayarlandı */
+
+
+  }
+  .button {
+    background-color: v.$color2;
+    border: none;
+  }
+}

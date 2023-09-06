@@ -1,0 +1,9 @@
+@use "../assets/variables" as v;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px !important;
+  text-decoration: none !important;
+  list-style: none;
+  background-color: v.$color1_1;
+}

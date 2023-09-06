@@ -1,0 +1,66 @@
+@use "../../assets/variables" as v;
+
+.tvseries-title {
+  color: white;
+  font-size: 26px;
+}
+  .tvshow-container {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: v.$color1;
+    border-radius: 50px 4px 4px 50px;
+    border: 0.1px solid v.$color3_1;
+    gap: 2px;
+    margin-bottom: 8px;
+
+    .container-poster-title {
+
+      display: flex;
+      font-size: 16px !important;
+      align-items: center;
+      color: white;
+      padding: 8px;
+      border-radius: 50px 4px 4px 50px;
+
+      .container-poster {
+        width: 50px; /* Yuvarlak dairenin genişliği */
+        height: 50px; /* Yuvarlak dairenin yüksekliği */
+        border-radius: 50%; /* Yuvarlak daireyi oluşturur */
+        overflow: hidden; /* İçeriğin daire sınırlarını aşan kısmını kesmek için */
+        position: relative; /* İçeriği pozisyonlandırmak için */
+        margin-right: 12px !important;
+        object-fit: cover;
+        padding: 30px;
+
+        .poster {
+          width: 100%; /* Afişin tamamını yuvarlak daire içine sığdırmak için */
+          height: 100%;; /* Oranları korumak için */
+          position: absolute; /* Afişi daire içinde pozisyonlandırmak için */
+          top: 50%; /* Yatay ortalamak için */
+          left: 50%; /* Dikey ortalamak için */
+          transform: translate(-50%, -50%); /* Afişi ortalamak için */
+        }
+      }
+      .tvshowname-title {
+
+      }
+
+    }
+    .tvshow-vote-average {
+      padding-right: 10px;
+      color: v.$color2; /* Yazı rengini beyaza ayarlayın */
+   white-space: nowrap!important;
+   font-size: 16px !important;
+
+   align-items: center;
+padding-top: 26px;
+
+svg {
+  padding-bottom: 2px;
+  padding-right: 2px;
+}
+  
+    }
+  }
+
