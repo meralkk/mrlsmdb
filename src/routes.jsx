@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Ro
 import HomePage from './pages/home-page.jsx';
 import MovieDetailPage from './pages/movie-detail-page.jsx';
 import MoviesPage from './pages/movies-page.jsx';
+import TvSeriesPage from './pages/tv-series-page.jsx';
 
 // Rotaları tanımlayın
 const AppRoutes = () => {
@@ -14,6 +15,7 @@ const AppRoutes = () => {
         <Route path="/" element={<HomePage />} /> 
         <Route path="/movies" element={<MoviesPage />} />
         <Route path="/movie-detail/:movieId" element={<MovieDetailPage />} />
+        <Route path="/tv-series" element={<TvSeriesPage />} />
 
       </Routes>
     </Router>

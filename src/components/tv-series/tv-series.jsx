@@ -42,10 +42,6 @@ function TvSeries() {
     <>
       <div className="tvseries-bg">
       <MainTitle title="Tv Series" />
-              {/* <div className="header">
-        <div className="header-title">TV Series</div>
-        <div className="tvseries-arrow"><BsArrowRightShort/>ee</div>
-        </div> */}
         {tvData.map((tvShow, index) => (
           <div className="tvshow-container">
             <div className="container-poster-title">

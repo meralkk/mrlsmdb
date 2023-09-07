@@ -18,6 +18,10 @@ function Menubar() {
           <Nav className="links">
             <Nav.Link as={Link} to="/movies" >Movies</Nav.Link>
           </Nav>
+          <Nav className="links">
+            <Nav.Link as={Link} to="/tv-series" >TV Series</Nav.Link>
+          </Nav>
+
           <Form className="d-flex">
             <Form.Control
               type="search"
