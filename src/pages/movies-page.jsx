@@ -1,10 +1,13 @@
 import React from 'react'
-// import Movies from '../components/movies'
+import AllMovies from '../components/all-movies/all-movies'
+import Menubar from '../components/header/menubar/menubar'
 
 const MoviesPage = () => {
   return (
     <div>
-        {/* <Movies/> */}
+            <Menubar />
+
+        <AllMovies/>
     </div>
   )
 }

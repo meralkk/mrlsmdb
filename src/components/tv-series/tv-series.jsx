@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
+// import { BsArrowRightShort } from "react-icons/bs";
+import MainTitle from '../main-title/main-title';
+
 import axios from "axios";
 import "./tv-series.scss";
 
@@ -37,9 +40,12 @@ function TvSeries() {
 
   return (
     <>
-      <div>
-        <div className="tvseries-title">TV Series</div>
-
+      <div className="tvseries-bg">
+      <MainTitle title="Tv Series" />
+              {/* <div className="header">
+        <div className="header-title">TV Series</div>
+        <div className="tvseries-arrow"><BsArrowRightShort/>ee</div>
+        </div> */}
         {tvData.map((tvShow, index) => (
           <div className="tvshow-container">
             <div className="container-poster-title">

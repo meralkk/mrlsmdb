@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import axios from "axios"; // Axios kütüphanesini içe aktarın
+import axios from "axios"; 
 import { AiFillStar } from 'react-icons/ai';
 import "./all-movies.scss";
+import MainTitle from '../main-title/main-title';
+
 
 function AllMovies() {
   // Film verilerini depolamak için state kullanılır
@@ -43,12 +45,14 @@ function AllMovies() {
   }, []);
 
   return (
-    <Container>
+    <Container className="tvseries-bg">
+            <MainTitle title="Trend Movies" />
+
       <Row>
         {movieData.map((movie) => (
+          
           <Col key={movie.id} sm={12} md={6} lg={4} xl={3}>
             <Card className="movie-card">
-              
               <Card.Img
                 variant="top"
                 src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}

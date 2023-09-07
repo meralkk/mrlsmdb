@@ -1,42 +1,101 @@
 @use "../../assets/variables" as v;
 
+
 .carousel-card {
-  // border: 0.1px solid v.$color3_1;
+  border: none !important;
+  background-color: v.$color1;
+  position: relative; /* Kartın içeriğini pozisyonlandırmak için */
+  border-radius: 14px !important;
 
   a {
     text-decoration: none !important;
     color: v.$color1;
-    text-align: center;
-    // background-color: green;
+    
   }
-}
-.card-body {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
 
-  .popular-title {
-    text-align: left;
-    max-height: 20px; /* İki satırın yüksekliği */
-    text-overflow: ellipsis; /* Taşan metni üç nokta ile kırpma */
+  img {
+    border-radius: 14px !important;
+
   }
-  .vote-average {
-    text-align: center;
 
-    color: v.$color3;
-    margin-left: 12px;
-    background-color: v.$color2;
-    width: 44px;
-    padding: 2px 8px 2px 8px;
-    border-radius: 4px;
+  .card-body {
+    position: absolute; /* İçeriği pozisyonlandırma */
+    bottom: 0; /* Kartın altına yerleştir */
+    left: 0; /* Kartın soluna yerleştir */
+    right: 0; /* Kartın sağına yerleştir */
+    color: #fff; /* İçeriğin metin rengi */
+    padding: 10px; /* İçeriğin iç kenar boşluğu */
+    text-align: center; /* İçeriği ortala */
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(255, 255, 255, 0) 90%
+    );
+    border-radius: 14px !important;
 
+
+    .popular-title {
+      
+      padding-bottom: 6px;
+      padding-left: 20px;
+      text-align: left;
+
+      // max-height: 30px; /* İki satırın yüksekliği */
+      max-width: 80%; /* Başlığın maksimum genişliği */
+      white-space: nowrap; /* Metni taşıma */
+      overflow: hidden; /* Fazla metni gizleme */
+      text-overflow: ellipsis; /* Taşan metni üç nokta ile kırpma */
+    }
+
+    .average {
+      position: absolute;
+      bottom: 5px; /* Oy ortalama yüksekliğini ayarlayın */
+      right: 10px; /* Oy ortalama sol kenarını ayarlayın */
+      color: v.$color2; /* Yazı rengini beyaza ayarlayın */
+      padding: 5px; /* İstediğiniz dolgu miktarını ayarlayın */
+      border-radius: 5px; /* Köşe yuvarlama ekleyin */
+    }
   }
 }
 
 .carousel-indicators {
-  margin-bottom: -2rem;
+  margin-bottom: -42px;
 
   > button {
-    background-color: v.$color1 !important;
+    background-color: v.$color3 !important;
+  }
+}
+
+.carousel-control-next {
+  width: 80px; /* İkonun genişliği */
+  height: 80px; /* İkonun yüksekliği */
+  background-color: v.$color1; /* 150px x 150px boyutunda yarı transparan arka plan */
+  display: flex; /* İçeriği ortalamak için flex kullan */
+  align-items: center; /* İçeriği dikey olarak ortala */
+  justify-content: center; /* İçeriği yatay olarak ortala */
+  border-radius: 50%; /* Yuvarlak bir şekil oluşturur */
+  transition: background-color 0.3s ease-in-out; /* Hover efekti için geçiş ekler */
+  margin-top: 180px;
+  margin-right:20px;
+
+  &:hover {
+    background-color: v.$color2; /* Hover durumunda turuncu arka plan */
+  }
+}
+
+.carousel-control-prev {
+  width: 80px; /* İkonun genişliği */
+  height: 80px; /* İkonun yüksekliği */
+  background-color: v.$color1; /* 150px x 150px boyutunda yarı transparan arka plan */
+  display: flex; /* İçeriği ortalamak için flex kullan */
+  align-items: center; /* İçeriği dikey olarak ortala */
+  justify-content: center; /* İçeriği yatay olarak ortala */
+  border-radius: 50%; /* Yuvarlak bir şekil oluşturur */
+  transition: background-color 0.3s ease-in-out; /* Hover efekti için geçiş ekler */
+  margin-top: 180px;
+  margin-left:20px;
+
+  &:hover {
+    background-color: v.$color2; /* Hover durumunda turuncu arka plan */
   }
 }
