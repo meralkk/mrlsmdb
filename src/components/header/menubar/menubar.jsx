@@ -14,17 +14,7 @@ function Menubar() {
     <>
       <Navbar className='navbar'>
         <Container>
-          <Navbar.Brand as={Link} to="/">MRL's MDB</Navbar.Brand>
-          <Nav className="links">
-            <Nav.Link as={Link} to="/movies" >Movies</Nav.Link>
-          </Nav>
-          <Nav className="links">
-            <Nav.Link as={Link} to="/tv-series" >TV Series</Nav.Link>
-          </Nav>
-          <Nav className="links">
-            <Nav.Link as={Link} to="/people" >People</Nav.Link>
-          </Nav>
-
+          <Navbar.Brand as={Link} to="/">MRL 's MDb</Navbar.Brand>
           <Form className="d-flex">
             <Form.Control
               type="search"
@@ -34,6 +24,17 @@ function Menubar() {
             />
             <Button className='button'>Search</Button>
           </Form>
+
+          <Nav className="links">
+            <Nav.Link as={Link} to="/movies" >Movies</Nav.Link>
+          </Nav>
+          <Nav className="links">
+            <Nav.Link as={Link} to="/tv-series" >TV Series</Nav.Link>
+          </Nav>
+          <Nav className="links">
+            <Nav.Link as={Link} to="/people" >Celebs</Nav.Link>
+          </Nav>
+
         </Container>
       </Navbar>
 

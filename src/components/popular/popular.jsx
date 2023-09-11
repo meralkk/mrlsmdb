@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios"; // Axios kütüphanesini içe aktarın
 import { AiFillStar } from 'react-icons/ai';
 import "./popular.scss";
+import MainTitle from "../main-title/main-title";
 
 
 function Slider() {
@@ -58,9 +59,10 @@ function Slider() {
 
   return (
 <Container>   
+<MainTitle title="Populer Movies" />
 
   <Carousel>
-    
+
     {movieChunks.map((moviesInRow, index) => (
       <Carousel.Item key={index}>
         <Row>

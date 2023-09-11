@@ -3,19 +3,23 @@
 .navbar {
   background-color: v.$color1;
   font-size: 18px;
-  height: 77px;
+  height: 80px;
   border-bottom: 0.1px solid v.$color3_1;
   margin-bottom: 20px;
 
-
   .navbar-brand {
-    color: v.$color3;
+    font-weight: 800;
+    background-color: v.$color2;
+    padding: 10px 14px 5px 14px;
+    border-radius: 4px;
+    color: v.$color1;
 
     &:hover {
-      color: v.$color2;
+      color: v.$color3;
     }
   }
   .links .nav-link {
+    padding-right: 2px;
     color: v.$color3;
 
     &:hover {
@@ -29,11 +33,14 @@
 
   .form-control {
     width: 600px; /* Arama kutusunun genişliği 400px olarak ayarlandı */
-
-
   }
   .button {
     background-color: v.$color2;
+    color: v.$color1;
     border: none;
+
+    &:hover {
+      background-color: v.$color1_1;
+    }
   }
 }

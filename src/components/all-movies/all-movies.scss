@@ -63,3 +63,24 @@
   padding: 5px; /* İstediğiniz dolgu miktarını ayarlayın */
   border-radius: 5px; /* Köşe yuvarlama ekleyin */
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination span {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pagination span.active {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}

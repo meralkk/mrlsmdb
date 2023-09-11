@@ -4,23 +4,30 @@ import axios from "axios";
 import { AiFillStar } from 'react-icons/ai';
 import "./tvseries-menu.scss";
 import MainTitle from '../main-title/main-title';
+import PaginationComponent from "../pagination/pagination-component";
 
 
-function AllMovies() {
+function TvSeriesMenu() {
   // Film verilerini depolamak için state kullanılır
   const [movieData, setMovieData] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+
+  const handlePageChange = (newPage) => {
+    setPage(newPage);
+  };
 
   useEffect(() => {
     // Verileri çekmek için asenkron bir fonksiyon kullanılır
     const loadData = async () => {
       const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
       const apiToken = import.meta.env.VITE_REACT_APP_API_TOKEN;
-
+      
       try {
         // Axios ile API'den verileri getirme
         const response = await axios.get(
-            "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1",
-            {
+          `https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=${page}`, // Burayı düzeltin
+          {
             headers: {
               accept: "application/json",
               Authorization: `Bearer ${apiToken}`,
@@ -28,9 +35,12 @@ function AllMovies() {
           }
         );
 
+        
         // Başarılı bir yanıt durumunda verileri güncelleme
         if (response.status === 200) {
           setMovieData(response.data.results);
+          setTotalPages(response.data.total_pages); // Toplam sayfa sayısını güncelleyin
+
         } else {
           console.error("API Request Error:", response.statusText);
         }
@@ -42,7 +52,7 @@ function AllMovies() {
 
     // Sayfa yüklendiğinde verileri çekme işlemi başlatılır
     loadData();
-  }, []);
+  }, [page]);
 
   return (
     <Container className="tvseries-bg">
@@ -66,8 +76,14 @@ function AllMovies() {
           </Col>
         ))}
       </Row>
+      <PaginationComponent
+        currentPage={page}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
+
     </Container>
   );
 }
 
-export default AllMovies;
+export default TvSeriesMenu;
