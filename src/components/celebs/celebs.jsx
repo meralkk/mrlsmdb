@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import axios from "axios"; 
 import { AiFillStar } from 'react-icons/ai';
-import "./people.scss";
+import "./celebs.scss";
 import MainTitle from '../main-title/main-title';
 
-
 function People() {
+
   // Film verilerini depolamak için state kullanılır
   const [movieData, setMovieData] = useState([]);
 
@@ -31,8 +31,10 @@ function People() {
         // Başarılı bir yanıt durumunda verileri güncelleme
         if (response.status === 200) {
           setMovieData(response.data.results);
+
         } else {
           console.error("API Request Error:", response.statusText);
+          
         }
       } catch (error) {
         console.error("API Request Error:", error);
@@ -42,7 +44,7 @@ function People() {
 
     // Sayfa yüklendiğinde verileri çekme işlemi başlatılır
     loadData();
-  }, []);
+  }, []); 
 
   return (
     <Container className="tvseries-bg">

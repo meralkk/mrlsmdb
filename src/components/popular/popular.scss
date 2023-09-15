@@ -5,7 +5,7 @@
   border: none !important;
   background-color: v.$color1;
   position: relative; /* Kartın içeriğini pozisyonlandırmak için */
-  border-radius: 14px !important;
+  // border-radius: 14px !important;
 
   a {
     text-decoration: none !important;
@@ -13,8 +13,12 @@
     
   }
 
+  .card-img, .card-img-top {
+    border-radius: 0px;
+  }
+
   img {
-    border-radius: 14px !important;
+    // border-radius: 14px !important;
 
   }
 
@@ -31,7 +35,7 @@
       rgba(0, 0, 0, 1) 40%,
       rgba(255, 255, 255, 0) 90%
     );
-    border-radius: 14px !important;
+    // border-radius: 14px !important;
 
 
     .popular-title {
@@ -53,7 +57,7 @@
       right: 10px; /* Oy ortalama sol kenarını ayarlayın */
       color: v.$color2; /* Yazı rengini beyaza ayarlayın */
       padding: 5px; /* İstediğiniz dolgu miktarını ayarlayın */
-      border-radius: 5px; /* Köşe yuvarlama ekleyin */
+      // border-radius: 5px; /* Köşe yuvarlama ekleyin */
     }
   }
 }
@@ -73,7 +77,7 @@
   display: flex; /* İçeriği ortalamak için flex kullan */
   align-items: center; /* İçeriği dikey olarak ortala */
   justify-content: center; /* İçeriği yatay olarak ortala */
-  border-radius: 50%; /* Yuvarlak bir şekil oluşturur */
+  // border-radius: 50%; /* Yuvarlak bir şekil oluşturur */
   transition: background-color 0.3s ease-in-out; /* Hover efekti için geçiş ekler */
   margin-top: 180px;
   margin-right:20px;
@@ -90,7 +94,7 @@
   display: flex; /* İçeriği ortalamak için flex kullan */
   align-items: center; /* İçeriği dikey olarak ortala */
   justify-content: center; /* İçeriği yatay olarak ortala */
-  border-radius: 50%; /* Yuvarlak bir şekil oluşturur */
+  // border-radius: 50%; /* Yuvarlak bir şekil oluşturur */
   transition: background-color 0.3s ease-in-out; /* Hover efekti için geçiş ekler */
   margin-top: 180px;
   margin-left:20px;

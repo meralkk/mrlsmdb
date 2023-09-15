@@ -1,14 +1,15 @@
 import React from 'react'
 import Menubar from '../components/header/menubar/menubar'
-import People from '../components/people/people'
+import Celebs from '../components/celebs/celebs'
 
-const PeoplePage = () => {
+const CelebsPage = () => {
+  
   return (
     <div>
       <Menubar/>
-      <People/>
+      <Celebs />
     </div>
   )
 }
 
-export default PeoplePage
+export default CelebsPage

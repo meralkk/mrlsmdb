@@ -4,7 +4,8 @@ import Home from '../components/home'
 const HomePage = () => {
   return (
     <div>
-        <Home/>
+      <Home />
+      {/* Diğer bileşenler veya sayfalar */}
     </div>
   )
 }

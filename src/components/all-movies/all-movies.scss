@@ -6,6 +6,10 @@
   border:none;
 }
 
+.card-img, .card-img-top {
+  border-radius: 0px;
+}
+
 .movie-card::before {
   content: "";
   position: absolute;

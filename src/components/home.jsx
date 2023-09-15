@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./footer/footer";
 import Menubar from "./header/menubar/menubar";
 import Spacer from "./spacer/spacer";
@@ -8,24 +8,30 @@ import AllMovies from "./all-movies/all-movies";
 import './home.scss'
 import TvSeries from "./tv-series/tv-series";
 
-function Home() {
+function Home({}) {
+  const [showOtherComponents, setShowOtherComponents] = useState(true); // Başlangıçta diğer componentleri göster
+
   return (
     <div>
-      <Menubar />
-      <Popular />
-      <Spacer />
-      <Container>
-        <Row>
-          <Col md={9}>
-            <AllMovies />
-          </Col>
-          <Col md={3}>
-            <TvSeries />
-          </Col>
-        </Row>
-      </Container>
-      <Spacer />
-      <Footer />
+      <Menubar showOtherComponents={showOtherComponents} setShowOtherComponents={setShowOtherComponents} />
+      {showOtherComponents && (
+        <>
+          <Popular />
+          <Spacer />
+          <Container>
+            <Row>
+              <Col md={9}>
+                <AllMovies />
+              </Col>
+              <Col md={3}>
+                <TvSeries />
+              </Col>
+            </Row>
+          </Container>
+          <Spacer />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

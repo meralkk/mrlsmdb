@@ -10,7 +10,7 @@
   .navbar-brand {
     font-weight: 800;
     background-color: v.$color2;
-    padding: 10px 14px 5px 14px;
+    padding: 6px 14px 5px 14px;
     border-radius: 4px;
     color: v.$color1;
 
@@ -44,3 +44,19 @@
     }
   }
 }
+  .search-results {
+    padding: 22px;
+  }
+  .no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 460px; /* Yükseklik ve genişlik istediğiniz boyutlara ayarlanabilir */
+    // width: 307px;
+    background-color:green; /* No Image alanının arka plan rengi */
+    color: #666; /* Metin rengi */
+    font-size: 18px; /* Metin boyutu */
+    border: 1px dashed #ccc; /* Kenarlık */
+    border-radius: 4px; /* Köşe yuvarlama */
+  }
+  
