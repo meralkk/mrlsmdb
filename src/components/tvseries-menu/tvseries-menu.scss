@@ -1,0 +1,33 @@
+@use "../../assets/variables" as v;
+
+.list-container {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  border: 0.1px solid v.$color3_1;
+  margin-bottom: 6px;
+
+  .list-poster {
+    width: 100px;
+    height: auto;
+  }
+
+  .list-title {
+    padding-left: 22px;
+    color: v.$color3;
+  }
+
+  .list-release-date {
+    color: v.$color3;
+  }
+
+  .list-average {
+    color: v.$color2;
+    white-space: nowrap !important;
+
+    svg {
+      padding-bottom: 2px;
+      padding-right: 2px;
+    }
+  }
+}

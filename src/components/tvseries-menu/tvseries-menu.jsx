@@ -9,8 +9,14 @@ import PaginationComponent from "../pagination/pagination-component";
 function TvSeriesMenu() {
   // TV dizisi verilerini depolamak için state kullanılır
   const [tvSeriesData, setTvSeriesData] = useState([]);
+
+  //Pagination için
   const [currentPage, setCurrentPage] = useState(1); // Mevcut sayfa numarası
   const [totalPages, setTotalPages] = useState(0);
+
+  //Card ve List yapısı için
+  const [isCardView, setIsCardView] = useState(true);
+  const [isListView, setIsListView] = useState(false);
 
   // Sayfa numarasını değiştiren işlev
   const handlePageChange = (newPage) => {
@@ -54,27 +60,67 @@ function TvSeriesMenu() {
   return (
     <Container className="tvseries-bg">
       <MainTitle title="TV Series" />
-      <Row>
-        {tvSeriesData.map((tvSeries) => (
-          <Col key={tvSeries.id} sm={12} md={6} lg={4} xl={3}>
-            <Card className="movie-card">
-              <Card.Img
-                variant="top"
-                src={`https://image.tmdb.org/t/p/w200/${tvSeries.poster_path}`}
-                alt={tvSeries.title}
-              />
+      <div className="view-toggle">
+        <button
+          onClick={() => {
+            setIsCardView(true);
+            setIsListView(false);
+          }}
+        >
+          Card Görünümü
+        </button>
+        <button
+          onClick={() => {
+            setIsCardView(false);
+            setIsListView(true);
+          }}
+        >
+          Liste Görünümü
+        </button>
+      </div>
+      {isCardView && ( // Eğer card seçtiyse
+        <Row>
+          {tvSeriesData.map((tvSeries) => (
+            <Col key={tvSeries.id} sm={12} md={6} lg={4} xl={3}>
+              <Card className="movie-card">
+                <Card.Img
+                  variant="top"
+                  src={`https://image.tmdb.org/t/p/w200/${tvSeries.poster_path}`}
+                  alt={tvSeries.title}
+                />
 
-              <div className="title">{tvSeries.name}</div>
-              <div className="release-date">
+                <div className="title">{tvSeries.name}</div>
+                <div className="release-date">
+                  {parseFloat(tvSeries.first_air_date).toFixed(0)}
+                </div>
+                <div className="average">
+                  <AiFillStar /> {parseFloat(tvSeries.vote_average).toFixed(1)}{" "}
+                </div>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      )}
+      {isListView && (
+        <Container>
+          {tvSeriesData.map((tvSeries) => (
+            <Col className="list-container" key={tvSeries.id}>
+              <img
+                src={`https://image.tmdb.org/t/p/w200/${tvSeries.poster_path}`}
+                alt={tvSeries.name}
+                className="list-poster"
+              />
+              <Col className="list-title">{tvSeries.name}</Col>
+              <Col className="list-release-date">
                 {parseFloat(tvSeries.first_air_date).toFixed(0)}
-              </div>
-              <div className="average">
-                <AiFillStar /> {parseFloat(tvSeries.vote_average).toFixed(1)}{" "}
-              </div>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+              </Col>
+              <Col className="list-average">
+                <AiFillStar /> {parseFloat(tvSeries.vote_average).toFixed(1)}
+              </Col>
+            </Col>
+          ))}
+        </Container>
+      )}
       <PaginationComponent
         currentPage={currentPage}
         totalPages={totalPages}

@@ -58,7 +58,7 @@ function Slider() {
   const movieChunks = chunkArray(movieData, 4);
 
   return (
-<Container>   
+<Container className="tvseries-bg">   
 <MainTitle title="Populer Movies" />
 
   <Carousel>
