@@ -1,11 +1,11 @@
 import React from 'react';
-import Routes from './Routes'; 
-import './styles/main.scss'; 
+import AppRoutes from './routes'; // AppRoutes olarak güncelledik
+import './styles/main.scss';
 
 function App() {
   return (
     <div className="App">
-      <Routes /> 
+      <AppRoutes /> {/* AppRoutes kullanın */}
     </div>
   );
 }
