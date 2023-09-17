@@ -1,12 +1,11 @@
 import React from 'react';
-import Routes from './Routes'; // Routes.jsx dosyasını içe aktarın
-import './styles/main.scss'; // Global stil dosyalarını içe aktarabilirsiniz
+import Routes from './Routes'; 
+import './styles/main.scss'; 
 
 function App() {
   return (
     <div className="App">
-      {/* Diğer bileşenleri veya yapılandırmaları burada ekleyebilirsiniz */}
-      <Routes /> {/* Routes bileşenini uygulama içinde kullanın */}
+      <Routes /> 
     </div>
   );
 }
