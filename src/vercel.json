@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "vite.config.js", // Vite yapılandırma dosyanızın yolunu belirtin
+        "use": "@vercel/node", // Vercel tarafından kullanılacak yapılandırma
+        "config": {
+          "maxLambdaSize": "50mb" // Lambda boyut sınırını belirleyin (isteğe bağlı)
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)", // Tüm yolları ele almak için düzenli bir ifade kullanabilirsiniz
+        "dest": "/index.html" // Varsayılan olarak yönlendirilen yol
+      }
+    ]
+  }
+  
