@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-icons/ai'],
+      external: ['react-icons/*'], // "react-icons" modülünün altındaki tüm ikonları dışladık
     },
   },
 });
