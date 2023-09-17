@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
 import { AiFillStar } from "react-icons/ai";
+import { TbLayoutList } from "react-icons/tb";
+import ViewDayRoundedIcon from '@mui/icons-material/ViewDayRounded';
+import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
+
 import "./tvseries-menu.scss";
 import MainTitle from "../main-title/main-title";
 import PaginationComponent from "../pagination/pagination-component";
@@ -59,25 +63,29 @@ function TvSeriesMenu() {
 
   return (
     <Container className="tvseries-bg">
-      <MainTitle title="TV Series" />
+          <div className="header">
+      <div className="header-title">TV Series</div>
       <div className="view-toggle">
-        <button
+        <button className="button-view"
           onClick={() => {
             setIsCardView(true);
             setIsListView(false);
           }}
         >
-          Card Görünümü
+          <GridViewRoundedIcon />
         </button>
-        <button
+        <button className="button-view"
           onClick={() => {
             setIsCardView(false);
             setIsListView(true);
           }}
         >
-          Liste Görünümü
+          <ViewDayRoundedIcon />
         </button>
       </div>
+
+    </div>
+
       {isCardView && ( // Eğer card seçtiyse
         <Row>
           {tvSeriesData.map((tvSeries) => (

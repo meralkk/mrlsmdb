@@ -21,6 +21,8 @@
     color: v.$color3;
   }
 
+
+
   .list-average {
     color: v.$color2;
     white-space: nowrap !important;
@@ -30,4 +32,22 @@
       padding-right: 2px;
     }
   }
+
+}
+
+.button-view {
+    border: none;
+    margin-left: 4px;
+    font-size: 24px;
+    color: v.$color3;
+    background-color: v.$color1;
+    padding-top: 20px;
+    color: white;
+    margin-bottom: 12px;
+    padding-bottom: 2px;
+
+    &:hover {
+    color: v.$color2;
+
+    }
 }
