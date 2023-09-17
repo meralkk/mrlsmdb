@@ -1,5 +1,6 @@
 @use "../../assets/variables" as v;
 
+
 .list-container {
   display: flex;
   align-items: center;
@@ -15,17 +16,21 @@
   .list-title {
     padding-left: 22px;
     color: v.$color3;
+
   }
 
   .list-release-date {
     color: v.$color3;
+    text-align: center;
+
   }
-
-
 
   .list-average {
     color: v.$color2;
     white-space: nowrap !important;
+    text-align: end;
+    padding-right: 26px;
+
 
     svg {
       padding-bottom: 2px;
