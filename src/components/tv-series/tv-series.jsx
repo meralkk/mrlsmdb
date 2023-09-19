@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/Ai";
 import MainTitle from '../main-title/main-title';
 import axios from "axios";
 import "./tv-series.scss";

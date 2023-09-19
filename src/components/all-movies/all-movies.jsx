@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/Ai";
 import "./all-movies.scss";
 import MainTitle from "../main-title/main-title";
 import PaginationComponent from "../pagination/pagination-component"; // Pagination bileşenini içeri aktarın
