@@ -7,6 +7,8 @@ import axios from 'axios';
 import { AiFillStar } from "react-icons/ai";
 import MainTitle from "../../main-title/main-title";
 import PaginationComponent from "../../pagination/pagination-component";
+import { AiOutlineSearch } from "react-icons/ai"; // React Icons içinden göz simgelerini içe aktarın
+
 
 function Menubar({ setShowOtherComponents }) {
   const [searchText, setSearchText] = useState('');
@@ -50,7 +52,7 @@ function Menubar({ setShowOtherComponents }) {
       <Navbar className="navbar">
         <Container>
           <Navbar.Brand as={Link} to="/" onClick={handleClearSearch}>
-            MRL 's MDb
+            & MRL 's <span>MDb</span>
           </Navbar.Brand>
 
           <Form className="d-flex" onSubmit={handleFormSubmit}>
@@ -62,10 +64,11 @@ function Menubar({ setShowOtherComponents }) {
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               onClick={handleClearSearch}
-            />
-            <Button className="button" type="submit">
-              Search
-            </Button>
+            /> 
+            
+            <div className="search-container">
+            <span className='search-icon'><AiOutlineSearch /></span></div>
+
           </Form>
 
           <Nav className="links">
