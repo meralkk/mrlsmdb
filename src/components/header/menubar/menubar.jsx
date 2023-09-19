@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './menubar.scss';
 import axios from 'axios';
-import { AiFillStar } from "react-icons/Ai";
+import { AiFillStar } from "react-icons/ai";
 import MainTitle from "../../main-title/main-title";
 import PaginationComponent from "../../pagination/pagination-component";
 

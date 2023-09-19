@@ -1,6 +1,6 @@
 import React from 'react'
 import './main-title.scss'
-import { BsArrowRightShort } from "react-icons/Bs";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const MainTitle = ({ title }) => {
   return (

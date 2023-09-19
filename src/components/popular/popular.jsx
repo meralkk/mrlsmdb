@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Carousel, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios"; // Axios kütüphanesini içe aktarın
-import { AiFillStar } from "react-icons/Ai";
+import { AiFillStar } from "react-icons/ai";
 import "./popular.scss";
 import MainTitle from "../main-title/main-title";
 
