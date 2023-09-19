@@ -7,6 +7,7 @@ import MovieDetailPage from './pages/movie-detail-page.jsx';
 import MoviesPage from './pages/movies-page.jsx';
 import CelebsPage from './pages/celebs-page';
 import TvSeriesPage from './pages/tv-series-page.jsx';
+import LoginPage from './pages/login-page.jsx';
 
 // Rotaları tanımlayın
 const AppRoutes = () => {
@@ -18,6 +19,7 @@ const AppRoutes = () => {
         <Route path="/movie-detail/:movieId" element={<MovieDetailPage />} />
         <Route path="/tv-series" element={<TvSeriesPage />} />
         <Route path="/celebs" element={<CelebsPage />} />
+        <Route path="/login" element={<LoginPage />} />
 
 
       </Routes>

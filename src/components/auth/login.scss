@@ -1,0 +1,101 @@
+@use "../../assets/variables" as v;
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .password-container {
+    position: relative;
+  }
+  
+  .inputs {
+    padding-top: 32px;
+  }
+
+  
+  .password-icon {
+    position: absolute;
+    top: 23px;
+    right: 10px; 
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .login-form {
+    background-color: v.$color1;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+  
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: v.$color3;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  
+    .error-message {
+      color: red;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  
+    .login {
+      background-color: v.$color2;
+      margin-top: 20px;
+      width: 100%;
+      color: v.$color1;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      border: none;
+  
+      &:hover {
+        background-color: v.$color2_1;
+        color: v.$color3;
+      }
+    }
+
+    p {
+     color: v.$color3;
+     text-align: center;
+     padding-top: 22px;
+
+    }
+    .options {
+      background-color: v.$color3;
+      width: 100%;
+      color: v.$color1;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      a {
+        text-decoration: none !important ;
+        color: v.$color1;
+      }
+
+  
+      &:hover {
+        background-color: v.$color2;
+
+      }
+    }
+
+  }

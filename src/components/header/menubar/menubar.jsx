@@ -82,6 +82,12 @@ function Menubar({ setShowOtherComponents }) {
             <Nav.Link as={Link} to="/celebs">
               Celebs
             </Nav.Link>
+          
+          </Nav>
+          <Nav className="links">
+            <Nav.Link as={Link} to="/login">
+              Login
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>

@@ -3,8 +3,8 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
 import { AiFillStar } from "react-icons/ai";
 import { TbLayoutList } from "react-icons/tb";
-import ViewDayRoundedIcon from '@mui/icons-material/ViewDayRounded';
-import GridViewRoundedIcon from '@mui/icons-material/GridViewRounded';
+import ViewDayRoundedIcon from "@mui/icons-material/ViewDayRounded";
+import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
 
 import "./tvseries-menu.scss";
 import MainTitle from "../main-title/main-title";
@@ -63,28 +63,29 @@ function TvSeriesMenu() {
 
   return (
     <Container className="tvseries-bg">
-          <div className="header">
-      <div className="header-title">TV Series</div>
-      <div className="view-toggle">
-        <button className="button-view"
-          onClick={() => {
-            setIsCardView(true);
-            setIsListView(false);
-          }}
-        >
-          <GridViewRoundedIcon />
-        </button>
-        <button className="button-view"
-          onClick={() => {
-            setIsCardView(false);
-            setIsListView(true);
-          }}
-        >
-          <ViewDayRoundedIcon />
-        </button>
+      <div className="header">
+        <div className="header-title">TV Series</div>
+        <div className="view-toggle">
+          <button
+            className="button-view"
+            onClick={() => {
+              setIsCardView(true);
+              setIsListView(false);
+            }}
+          >
+            <GridViewRoundedIcon />
+          </button>
+          <button
+            className="button-view"
+            onClick={() => {
+              setIsCardView(false);
+              setIsListView(true);
+            }}
+          >
+            <ViewDayRoundedIcon />
+          </button>
+        </div>
       </div>
-
-    </div>
 
       {isCardView && ( // Eğer card seçtiyse
         <Row>
