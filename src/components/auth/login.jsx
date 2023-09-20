@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './login.scss';
-import { BsEye, BsEyeSlash } from 'react-icons/bs'; // React Icons içinden göz simgelerini içe aktarın
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -56,7 +57,7 @@ const Login = () => {
             {...formik.getFieldProps('password')}
           />
           <div className="password-icon" onClick={togglePasswordVisibility}>
-            {showPassword ? <BsEyeSlash /> : <BsEye />} {/* Göz simgesini tıklanınca parola görünürlüğünü */}
+            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />} {/* Göz simgesini tıklanınca parola görünürlüğünü */}
           </div>
         </div>
         {formik.touched.password && formik.errors.password ? (
