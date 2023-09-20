@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./register.scss";
-import { BsEye, BsEyeSlash } from "../../../node_modules/react-icons/bs"; 
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -67,7 +68,7 @@ const Register = () => {
             {...formik.getFieldProps("email")}
           />
           <div className="password-icon" onClick={togglePasswordVisibility}>
-            {showPassword ? <BsEyeSlash /> : <BsEye />}{" "}
+            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}{" "}
             {/* Göz simgesini tıklanınca parola görünürlüğünü */}
           </div>
 
