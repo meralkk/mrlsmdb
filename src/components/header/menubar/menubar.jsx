@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
-import { Container, Nav, Navbar, Form, Button, Card, Col, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './menubar.scss';
-import axios from 'axios';
+import React, { useState } from "react";
+import {
+  Container,
+  Nav,
+  Navbar,
+  Form,
+  Button,
+  Card,
+  Col,
+  Row,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./menubar.scss";
+import axios from "axios";
 import { AiFillStar } from "../../../../node_modules/react-icons/ai";
 import MainTitle from "../../main-title/main-title";
 import PaginationComponent from "../../pagination/pagination-component";
 import { AiOutlineSearch } from "react-icons/ai"; // React Icons içinden göz simgelerini içe aktarın
 
-
 function Menubar({ setShowOtherComponents }) {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -22,7 +30,8 @@ function Menubar({ setShowOtherComponents }) {
     handleSearch(newPage); // Sayfa değiştiğinde yeni verileri çekmek için handleSearch işlemini çağırın
   };
 
-  const handleSearch = async (page = 1) => { // Sayfa numarasını parametre olarak alın
+  const handleSearch = async (page = 1) => {
+    // Sayfa numarasını parametre olarak alın
     try {
       const response = await axios.get(
         `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${searchText}&include_adult=false&page=${page}`
@@ -30,9 +39,8 @@ function Menubar({ setShowOtherComponents }) {
       setSearchResults(response.data.results);
       setShowOtherComponents(false);
       setTotalPages(response.data.total_pages);
-
     } catch (error) {
-      console.error('Error searching:', error);
+      console.error("Error searching:", error);
     }
   };
 
@@ -42,7 +50,7 @@ function Menubar({ setShowOtherComponents }) {
   };
 
   const handleClearSearch = () => {
-    setSearchText('');
+    setSearchText("");
     setSearchResults([]);
     setShowOtherComponents(true);
   };
@@ -58,16 +66,13 @@ function Menubar({ setShowOtherComponents }) {
           <Form className="d-flex" onSubmit={handleFormSubmit}>
             <Form.Control
               type="search"
-              placeholder="Search MRL's MDB"
+              placeholder="Search MRL's MDb.."
               className="me-2"
               aria-label="Search"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
               onClick={handleClearSearch}
-            /> 
-            
-            <div className="search-container">
-            <span className='search-icon'><AiOutlineSearch /></span></div>
+            />
 
           </Form>
 
@@ -85,9 +90,9 @@ function Menubar({ setShowOtherComponents }) {
             <Nav.Link as={Link} to="/celebs">
               Celebs
             </Nav.Link>
-          
           </Nav>
-          <Nav className="links">
+          
+          <Nav className="main-login">
             <Nav.Link as={Link} to="/login">
               Login
             </Nav.Link>
@@ -105,15 +110,14 @@ function Menubar({ setShowOtherComponents }) {
                   <Card className="movie-card">
                     {result.poster_path ? (
                       <Card.Img
-                      style={{
-                        height: '450px', // Yüksekliği ayarlayın
-                        objectFit: 'cover', // Resmi ölçeklendirin ve sığdırın
-                      }}
-                      variant="top"
-                      src={`https://image.tmdb.org/t/p/w200/${result.poster_path}`}
-                      alt={result.title || result.name}
-                    />
-                    
+                        style={{
+                          height: "450px", // Yüksekliği ayarlayın
+                          objectFit: "cover", // Resmi ölçeklendirin ve sığdırın
+                        }}
+                        variant="top"
+                        src={`https://image.tmdb.org/t/p/w200/${result.poster_path}`}
+                        alt={result.title || result.name}
+                      />
                     ) : (
                       <Card.Img
                         variant="top"

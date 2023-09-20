@@ -22,6 +22,18 @@
       background-color: v.$color2;
     }
   }
+
+  .main-login {
+    background-color: v.$color3;
+    font-weight: 600;
+    padding: 0 5px;
+    border-radius: 4px;
+
+
+    &:hover {
+      background-color: v.$color2;
+    }
+  }
   .links .nav-link {
     padding-right: 2px;
     color: v.$color3;
@@ -32,7 +44,7 @@
   }
 
   .me-2 {
-    margin-right: 2rem; /* 2rem sağ boşluk ekleyin (isteğe bağlı) */
+    margin-right: 2rem;
   }
 
   .form-control {
@@ -48,18 +60,6 @@
     }
   }
 }
-.search-container {
-  position: relative;
-}
-
-.search-icon {
-  font-size: 24px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
 
 .search-results {
   padding: 22px;
@@ -68,11 +68,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 460px; /* Yükseklik ve genişlik istediğiniz boyutlara ayarlanabilir */
-  // width: 307px;
-  background-color: green; /* No Image alanının arka plan rengi */
-  color: #666; /* Metin rengi */
-  font-size: 18px; /* Metin boyutu */
-  border: 1px dashed #ccc; /* Kenarlık */
-  border-radius: 4px; /* Köşe yuvarlama */
+  height: 460px;
+  background-color: green;
+  color: #666;
+  font-size: 18px;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
 }
