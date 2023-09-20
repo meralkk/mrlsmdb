@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillStar } from "../../../node_modules/react-icons/ai";
+import GradeIcon from '@mui/icons-material/Grade';
 import './movie-detail.scss'
 
 function MovieDetail() {
@@ -59,7 +59,7 @@ function MovieDetail() {
         <Col className="details" md={9}>
           <div className="title-rating">
           <div className="detail-title">{movieDetail.title}</div>
-          <div className="rating"> <span>IMDb Rating</span>&nbsp;<AiFillStar/>&nbsp;{parseFloat(movieDetail.vote_average).toFixed(1)}</div>
+          <div className="rating"> <span>IMDb Rating</span>&nbsp;<GradeIcon/>&nbsp;{parseFloat(movieDetail.vote_average).toFixed(1)}</div>
           </div>
           <p className="movie-overview">{movieDetail.overview}</p>
 

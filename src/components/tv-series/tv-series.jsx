@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiFillStar } from "../../../node_modules/react-icons/ai";
+import GradeIcon from '@mui/icons-material/Grade';
 import MainTitle from '../main-title/main-title';
 import axios from "axios";
 import "./tv-series.scss";
@@ -51,7 +51,7 @@ function TvSeries() {
             <div className="tvshowname-title">{tvShow.name}</div>
           </div>
           <div className="tvshow-vote-average">
-            <AiFillStar />
+            <GradeIcon />
             {tvShow.vote_average}
           </div>
         </div>

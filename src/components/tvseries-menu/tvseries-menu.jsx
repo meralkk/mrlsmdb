@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
-import { AiFillStar } from "../../../node_modules/react-icons/ai";
+import GradeIcon from '@mui/icons-material/Grade';
 import ViewDayRoundedIcon from "@mui/icons-material/ViewDayRounded";
 import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
-
 import "./tvseries-menu.scss";
-import MainTitle from "../main-title/main-title";
 import PaginationComponent from "../pagination/pagination-component";
 
 function TvSeriesMenu() {
@@ -102,7 +100,7 @@ function TvSeriesMenu() {
                   {parseFloat(tvSeries.first_air_date).toFixed(0)}
                 </div>
                 <div className="average">
-                  <AiFillStar /> {parseFloat(tvSeries.vote_average).toFixed(1)}{" "}
+                  <GradeIcon /> {parseFloat(tvSeries.vote_average).toFixed(1)}{" "}
                 </div>
               </Card>
             </Col>

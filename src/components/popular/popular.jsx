@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Carousel, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios"; // Axios kütüphanesini içe aktarın
-import { AiFillStar } from "../../../node_modules/react-icons/ai";
+import GradeIcon from '@mui/icons-material/Grade';
 import "./popular.scss";
 import MainTitle from "../main-title/main-title";
 
@@ -78,7 +78,7 @@ function Slider() {
                         <div className="popular-title">{movie.title}</div>
                         <div className="average">
                           {" "}
-                          <AiFillStar /> {movie.vote_average}
+                          <GradeIcon /> {movie.vote_average}
                         </div>
                       </div>
                     </Link>

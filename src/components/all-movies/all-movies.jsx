@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
-import { AiFillStar } from "../../../node_modules/react-icons/ai";
+import GradeIcon from '@mui/icons-material/Grade';
 import "./all-movies.scss";
 import MainTitle from "../main-title/main-title";
 import PaginationComponent from "../pagination/pagination-component"; // Pagination bileşenini içeri aktarın
@@ -62,7 +62,7 @@ function AllMovies() {
                 {parseFloat(movie.release_date).toFixed(0)}
               </div>
               <div className="average">
-                <AiFillStar /> {parseFloat(movie.vote_average).toFixed(1)}{" "}
+                <GradeIcon /> {parseFloat(movie.vote_average).toFixed(1)}{" "}
               </div>
             </Card>
           </Col>
