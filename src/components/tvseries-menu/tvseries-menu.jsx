@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "../../../node_modules/react-icons/ai";
 import ViewDayRoundedIcon from "@mui/icons-material/ViewDayRounded";
 import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
 

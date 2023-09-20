@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "../../../node_modules/react-icons/ai";
 import './movie-detail.scss'
 
 function MovieDetail() {

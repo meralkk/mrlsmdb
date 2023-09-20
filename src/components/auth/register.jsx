@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./register.scss";
-import { BsEye, BsEyeSlash } from "react-icons/bs"; // React Icons içinden göz simgelerini içe aktarın
+import { BsEye, BsEyeSlash } from "../../../node_modules/react-icons/bs"; 
 import { Link } from "react-router-dom";
 
 const Register = () => {
