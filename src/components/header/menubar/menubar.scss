@@ -21,6 +21,16 @@
     &:hover {
       background-color: v.$color2;
     }
+
+    @media (max-width:768px) {
+      
+    width: 150px;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 10px;
+    }
+
+
   }
 
   .main-login {
@@ -75,3 +85,5 @@
   border: 1px dashed #ccc;
   border-radius: 4px;
 }
+
+

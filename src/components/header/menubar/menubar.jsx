@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Container,
-  Nav,
-  Navbar,
-  Form,
-  Card,
-  Col,
-  Row,
-} from "react-bootstrap";
+import { Container, Nav, Navbar, Form, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./menubar.scss";
@@ -57,7 +49,7 @@ function Menubar({ setShowOtherComponents }) {
       <Navbar className="navbar">
         <Container>
           <Navbar.Brand as={Link} to="/" onClick={handleClearSearch}>
-            & MRL 's <span>MDb</span>
+            MRL 's MDb
           </Navbar.Brand>
 
           <Form className="d-flex" onSubmit={handleFormSubmit}>

@@ -23,12 +23,11 @@ function MovieDetail() {
               accept: "application/json",
               Authorization: `Bearer ${apiToken}`,
             },
-          }
+          } 
         );
 
         if (response.status === 200) {
           setMovieDetail(response.data);
-          console.log(response.data.genre_ids);
         } else {
           console.error("API Request Error:", response.statusText);
         }

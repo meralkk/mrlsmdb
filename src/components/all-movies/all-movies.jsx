@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import axios from "axios";
 import GradeIcon from '@mui/icons-material/Grade';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import "./all-movies.scss";
 import MainTitle from "../main-title/main-title";
-import PaginationComponent from "../pagination/pagination-component"; // Pagination bileşenini içeri aktarın
+import PaginationComponent from "../pagination/pagination-component";
 
 function AllMovies() {
   const [movieData, setMovieData] = useState([]);
   const [page, setPage] = useState(1);
-  const totalPages = 20; // Örnek olarak toplam sayfa sayısı
+  const totalPages = 20;
 
   const handlePageChange = (newPage) => {
     setPage(newPage);
@@ -50,21 +51,23 @@ function AllMovies() {
       <Row>
         {movieData.map((movie) => (
           <Col key={movie.id} sm={12} md={6} lg={4} xl={3}>
-            <Card className="movie-card">
-              <Card.Img
-                variant="top"
-                src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
-                alt={movie.title}
-              />
-
-              <div className="title">{movie.title}</div>
-              <div className="release-date">
-                {parseFloat(movie.release_date).toFixed(0)}
-              </div>
-              <div className="average">
-                <GradeIcon /> {parseFloat(movie.vote_average).toFixed(1)}{" "}
-              </div>
-            </Card>
+            {/* Wrap Card.Img with Link */}
+            <Link to={`/movie-detail/${movie.id}`} className="movie-link">
+              <Card className="movie-card">
+                <Card.Img
+                  variant="top"
+                  src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+                  alt={movie.title}
+                />
+                <div className="title">{movie.title}</div>
+                <div className="release-date">
+                  {parseFloat(movie.release_date).toFixed(0)}
+                </div>
+                <div className="average">
+                  <GradeIcon /> {parseFloat(movie.vote_average).toFixed(1)}{" "}
+                </div>
+              </Card>
+            </Link>
           </Col>
         ))}
       </Row>

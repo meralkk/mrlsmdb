@@ -52,7 +52,7 @@ function TvSeries() {
           </div>
           <div className="tvshow-vote-average">
             <GradeIcon />
-            {tvShow.vote_average}
+            {tvShow.vote_average.toFixed(1)}
           </div>
         </div>
       ))}

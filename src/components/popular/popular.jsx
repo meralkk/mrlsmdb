@@ -77,8 +77,7 @@ function Slider() {
                       <div className="card-body">
                         <div className="popular-title">{movie.title}</div>
                         <div className="average">
-                          {" "}
-                          <GradeIcon /> {movie.vote_average}
+                          <GradeIcon /> {movie.vote_average.toFixed(1)}
                         </div>
                       </div>
                     </Link>

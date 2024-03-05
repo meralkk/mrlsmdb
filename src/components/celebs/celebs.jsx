@@ -63,7 +63,7 @@ function People() {
 
                 <div className="title">{movie.name}</div>
                 <div className="release-date">{movie.known_for_department}</div>
-                <div className="average"><GradeIcon/>  {parseFloat(movie.popularity).toFixed(1)} </div>
+                {/* <div className="average"><GradeIcon/>  {parseFloat(movie.popularity).toFixed(1)} </div> */}
             </Card>
           </Col>
         ))}
